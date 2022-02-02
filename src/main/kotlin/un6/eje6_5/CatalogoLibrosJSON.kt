@@ -87,11 +87,11 @@ public class CatalogoLibrosJSON(cargador: String):AccederLibros
     {
         CatalogoLibrosXML.l.info {"[Clase]"+ msg }
     }
-  override  fun infoLibro(idLibro: String): Map<String, Any> {
+    override  fun infoLibro(idLibro: String): Map<String, Any> {
         var book = libros.first{ it.id == idLibro }
         return book.serializeToMap()
     }
-   override fun existeLibro(idLibro: String): Boolean {
+    override fun existeLibro(idLibro: String): Boolean {
         return libros.indexOfFirst { it.id == idLibro } >=0
     }
 }
